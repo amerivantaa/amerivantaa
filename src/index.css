@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero bridge cable animation (moved here from an inline <style>
+   tag so it's part of the compiled CSS bundle, not re-created on
+   every render). */
+@keyframes travel {
+  0% { offset-distance: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+.chip-travel {
+  animation: travel 6s linear infinite;
+}
+.chip-travel.d2 { animation-delay: -1.5s; }
+.chip-travel.d3 { animation-delay: -3s; }
+.chip-travel.d4 { animation-delay: -4.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .chip-travel {
+    animation: none;
+    opacity: 1;
+    offset-distance: 50%;
+  }
+}
+
+/* Subtle dot-grid texture for section backgrounds — adds depth
+   without needing an image asset. */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, #C9D6E8 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Soft radial glow used behind the hero visual */
+.bg-glow {
+  background: radial-gradient(60% 60% at 50% 40%, rgba(11,79,156,0.10), transparent 70%);
+}
+
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(11, 79, 156, 0.12);
+}
