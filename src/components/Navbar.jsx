@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Link2 } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { company, nav } from '../data/content'
 
 export default function Navbar() {
@@ -20,10 +20,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-[72px]">
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-            <Link2 size={18} className="text-white" strokeWidth={2.5} />
-          </span>
-          <span className="font-display font-bold text-lg text-primary-dark">{company.name}</span>
+          <img src="/logo.png" alt={`${company.name} logo`} className="h-10 w-auto" width="128" height="128" />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted">

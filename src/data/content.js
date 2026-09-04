@@ -8,8 +8,9 @@ export const company = {
   tagline: 'IT Staff Augmentation & Consulting',
   email: 'hello@amerivantaa.com',
   phone: '+1 (000) 000-0000',
-  // Serving US clients remotely — swap for your real office location.
-  location: 'Serving clients across the United States',
+  // Short summary used in the footer/contact card. Full office list
+  // lives in `offices` below — update both if your footprint changes.
+  location: 'Offices across the U.S., UAE & India',
   // Formspree endpoint that forwards contact-form submissions to your
   // organization inbox. Sign up free at https://formspree.io, create a
   // form pointed at your real email address, and paste its endpoint
@@ -18,11 +19,23 @@ export const company = {
   formEndpoint: '',
 }
 
+// Real office footprint. Replace the descriptor text with your actual
+// role for each location (e.g. "Delivery Center", "Client Success Hub",
+// "Registered Office") and add a street address once you want it public.
+export const offices = [
+  { city: 'Pune', country: 'India', role: 'Delivery Center' },
+  { city: 'Indore', country: 'India', role: 'Delivery Center' },
+  { city: 'Bhopal', country: 'India', role: 'Delivery Center' },
+  { city: 'Dubai', country: 'UAE', role: 'Regional Hub' },
+  { city: 'United States', country: '', role: 'Client Success' },
+]
+
 export const nav = [
+  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Process', href: '#process' },
   { label: 'Industries', href: '#industries' },
-  { label: 'Enterprise', href: '#enterprise' },
+  { label: 'Technologies', href: '#technologies' },
+  { label: 'Case Studies', href: '#case-studies' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -143,6 +156,13 @@ export const enterpriseReady = {
     'We do not yet hold formal certifications such as SOC 2 or ISO 27001 — if these are hard requirements for your procurement process, ask us directly about current status before contracting.',
 }
 
+export const caseStudies = {
+  eyebrow: 'Case studies',
+  title: "We're building our public case-study library",
+  body: "As a newer firm, we don't have a public portfolio to show yet — and we'd rather say that plainly than dress up placeholder projects as client work. What we can do: walk you through the engagement model in detail, share how a current placement is structured, and once we have client permission, publish real outcomes here.",
+  cta: { label: 'Ask us about current engagements', href: '#contact' },
+}
+
 export const services = [
   {
     tag: 'Core offering',
@@ -185,17 +205,19 @@ export const techStack = {
 }
 
 export const industries = {
-  eyebrow: 'Industries',
-  title: 'Where staff augmentation moves the needle most',
+  eyebrow: 'Industries we serve',
+  title: 'Multiple verticals, one delivery model',
   items: [
     'Healthcare',
     'FinTech',
     'Retail & E-Commerce',
-    'Logistics',
+    'Logistics & Supply Chain',
     'Real Estate',
     'Travel & Hospitality',
     'EdTech',
     'SaaS & B2B Software',
+    'Insurance',
+    'Manufacturing',
   ],
 }
 

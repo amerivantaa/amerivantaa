@@ -24,7 +24,7 @@ export default function TechStack() {
   const ref = useReveal()
 
   return (
-    <section className="py-20 md:py-28 bg-surface">
+    <section id="technologies" className="py-20 md:py-28 bg-surface">
       <div ref={ref} className="reveal max-w-6xl mx-auto px-5 md:px-8">
         <p className="text-xs font-semibold tracking-wide uppercase text-primary">{techStack.eyebrow}</p>
         <h2 className="mt-3 font-display font-bold text-3xl md:text-4xl text-ink max-w-2xl">{techStack.title}</h2>

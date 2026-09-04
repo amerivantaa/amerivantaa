@@ -65,6 +65,12 @@ To change your company name, replace `Amerivantaa` in:
 
 ## Design tokens
 
+Your real logo lives at `public/logo.png` (used in the navbar, footer, and
+browser favicon). To swap it later, just replace that file — same
+filename, any reasonably square image works. It was resized to 320px wide
+and compressed on the way in; the source PDF/PNG you sent was over 800 KB,
+which would have been a poor first-load experience.
+
 Colors and fonts are defined once in `tailwind.config.js` under `theme.extend`.
 Change `primary` / `accent` hex values there to re-theme the whole site.
 
